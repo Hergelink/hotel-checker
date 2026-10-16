@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="referrer" content="no-referrer">
+<title>Hotel Check | Titcotour</title>
+<style>
+:root{font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:#172337;background:#f6f8fb}*{box-sizing:border-box}body{margin:0}button,input,select{font:inherit}button{cursor:pointer}.top{background:#fff;border-bottom:1px solid #e5ebf3;padding:20px max(20px,calc((100vw - 1050px)/2));display:flex;align-items:center;justify-content:space-between}.brand{display:flex;gap:12px;align-items:center}.mark{background:#163b66;color:white;font-weight:800;border-radius:11px;width:42px;height:42px;display:grid;place-items:center;font-size:22px}.brand strong{display:block;font-size:17px}.brand span{color:#78879c;font-size:12px}.shell{max-width:1050px;margin:56px auto;padding:0 20px}.heading{text-align:center;margin-bottom:30px}h1{font-size:clamp(30px,4vw,43px);margin:0 0 12px;letter-spacing:-1.5px}p{line-height:1.65;color:#64748b}.heading p{margin:0}.panel{background:white;border:1px solid #e3e9f0;border-radius:18px;box-shadow:0 12px 40px #233c5a0b;padding:28px}.input-row{display:flex;gap:10px}.input-row input{flex:1;min-width:0}.input-row input,.login input{border:1px solid #d8e1ea;padding:15px 16px;border-radius:10px;outline:none;background:#fff}.input-row input:focus,.login input:focus{border-color:#4c82c9;box-shadow:0 0 0 3px #dceaff}button.primary{background:#173f6d;color:white;border:0;border-radius:10px;padding:14px 23px;font-weight:650}button.primary:hover{background:#21588e}button:disabled{opacity:.55;cursor:not-allowed}.controls{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-top:18px;flex-wrap:wrap}.seg{display:flex;gap:6px}.seg button{border:1px solid #e1e7ee;background:#fff;color:#617086;border-radius:8px;padding:9px 15px}.seg button.active{background:#eaf1fa;border-color:#a8c6e4;color:#174c84;font-weight:650}.hint{font-size:12px;color:#8995a5}.hide{display:none!important}.error{color:#ae2838;background:#fff0f2;border:1px solid #f5c7cc;padding:12px 15px;border-radius:10px;margin-top:16px}.spinner{width:20px;height:20px;border:3px solid #c9d8e9;border-top-color:#1b5790;border-radius:50%;animation:spin .8s linear infinite}@keyframes spin{to{transform:rotate(360deg)}}.loading{display:flex;align-items:center;gap:12px;padding:22px;background:#eef5fc;border-radius:12px;margin-top:20px;color:#28527c}.result{margin-top:24px}.meta{font-size:12px;color:#8a96a6;letter-spacing:.5px;font-weight:700}.report-head{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:18px}.report-head h2{margin:7px 0 4px;font-size:28px}.report-head p{margin:0}.badge{display:inline-flex;align-items:center;border-radius:30px;padding:9px 14px;font-weight:700;font-size:13px;height:max-content}.good{color:#16764c;background:#e4f6ec}.caution{color:#96630a;background:#fff1d0}.avoid{color:#a12f3d;background:#fce8eb}.unknown,.insufficient{color:#51627b;background:#eef1f6}.scorebar{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin:20px 0}.score{font-size:28px;font-weight:800}.score small{font-size:13px;color:#8490a1}.chip{font-size:12px;background:#f2f5f9;color:#526178;border-radius:20px;padding:8px 12px}.columns{display:grid;grid-template-columns:1fr 1fr;gap:18px}.section{border:1px solid #e9edf2;border-radius:12px;padding:18px;margin-top:16px}.section h3{margin:0 0 12px;font-size:15px}.section ul{padding-left:19px;margin:0}.section li{margin:9px 0;line-height:1.5;color:#4b5b6c}.section p{margin:0}.callout{padding:18px;border-radius:12px;background:#edf5fc;margin-top:16px}.callout strong{color:#174b7f}.callout p{margin:7px 0 0;color:#2f5374}.sources a{display:block;color:#225a91;text-decoration:none;padding:9px 0;word-break:break-word;border-bottom:1px solid #eff2f6}.sources a:hover{text-decoration:underline}.footer{text-align:center;font-size:12px;color:#9aa5b5;margin:28px 0 40px}.login{max-width:420px;margin:100px auto;padding:0 16px}.login input{width:100%;margin:10px 0 14px}.login .primary{width:100%}.secondary{background:white;color:#6b7888;border:1px solid #d9e1e9;border-radius:8px;padding:8px 12px}.actions{display:flex;gap:8px;justify-content:flex-end;margin-top:18px}@media(max-width:650px){.shell{margin:36px auto}.panel{padding:18px}.input-row{flex-direction:column}.columns{grid-template-columns:1fr}.top{padding:15px 20px}.hint{display:none}}@media print{.top,.formpanel,.actions,.footer,.heading{display:none!important}.shell{margin:0;max-width:none}.panel{box-shadow:none;border:0;padding:0}.result{margin:0}}
+</style>
+</head>
+<body>
+<header class="top"><div class="brand"><div class="mark">T</div><div><strong>TITCOTOUR</strong><span>Otel Kalite Kontrol</span></div></div></header>
+<main id="app" class="shell"><div class="heading"><h1>Bu otel konaklama için uygun mu?</h1><p>Otel adını, otelin web sitesi bağlantısını, Google Haritalar bağlantısını veya Google arama sonucunun bağlantısını girin. Yapay zekâ güncel misafir yorumlarını incelesin.</p></div>
+<div class="panel formpanel"><form id="form"><label for="url" style="display:block;font-size:13px;font-weight:700;margin-bottom:10px">OTEL ADI VEYA BAĞLANTISI</label><div class="input-row"><input id="url" type="text" placeholder="Örn. Hilton Paris Opera veya https://www.google.com/search?q=..." required maxlength="1500" autocomplete="off"><button id="analyze" class="primary" type="submit">✦ Oteli analiz et</button></div><div class="controls"><div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap"><span style="font-size:13px;color:#657389">Yorum dönemi:</span><div class="seg"><button type="button" data-days="30">30 gün</button><button type="button" data-days="90" class="active">90 gün</button><button type="button" data-days="180">180 gün</button></div></div><span class="hint">Güncel web araştırması · Otel bilgileri kaydedilmez</span></div></form><div id="error" class="error hide"></div><div id="loading" class="loading hide"><div class="spinner"></div><div><strong>Güncel misafir yorumları inceleniyor...</strong><div style="font-size:13px;margin-top:3px">Açık kaynaklar taranıyor ve olası sorunlar değerlendiriliyor.</div></div></div></div>
+<div id="result" class="panel result hide"><div class="report-head"><div><div class="meta">TITCOTOUR · OTEL DEĞERLENDİRME RAPORU</div><h2 id="hotel"></h2><p id="location"></p></div><span id="status" class="badge"></span></div><div class="scorebar"><div class="score" id="score"></div><div class="chip" id="confidence"></div><div class="chip" id="checked"></div></div><div class="section"><h3>Genel değerlendirme</h3><p id="summary"></p></div><div class="columns"><div class="section"><h3>✓ Olumlu yorumlar</h3><ul id="positives"></ul></div><div class="section"><h3>⚠ Olası sorunlar</h3><ul id="concerns"></ul></div></div><div class="callout"><strong>Öneri</strong><p id="recommendation"></p></div><div class="section"><h3>Kaynakların kapsamı ve sınırlamalar</h3><p id="evidence"></p></div><div class="section sources"><h3>Kaynaklar ve yorum bağlantıları</h3><div id="sources"></div></div><div class="actions"><button id="copy" class="secondary">Özeti kopyala</button><button id="downloadPdf" class="primary" type="button">↓ İnceleme Raporunu İndir (PDF)</button><button id="print" class="secondary" type="button">Tam raporu yazdır</button></div><p style="font-size:12px;margin:16px 0 0">Bu rapor yapay zekâ araştırmasıdır; güvenlik garantisi değildir. Rezervasyon kararından önce önemli sorunları doğrudan otelle doğrulayın.</p></div>
+<div class="footer">TITCOTOUR · Şirket içi otel değerlendirme aracı</div></main>
+<script>
+const $=id=>document.getElementById(id);let days=90,lastReport=null,lastChecked=null;
+async function request(body){const res=await fetch('/api/check',{method:'POST',headers:{'Content-Type':'application/json'},credentials:'same-origin',body:JSON.stringify(body)});let data;try{data=await res.json()}catch{throw new Error('Sunucuya ulaşılamadı. Yayın ve sunucu ayarlarını kontrol edin.')}if(!res.ok)throw new Error(data.error||'İstek başarısız oldu');return data}
+function show(id,on=true){$(id).classList.toggle('hide',!on)}
+document.querySelectorAll('[data-days]').forEach(b=>b.onclick=()=>{days=Number(b.dataset.days);document.querySelectorAll('[data-days]').forEach(x=>x.classList.toggle('active',x===b))});
+function text(id,val){$(id).textContent=val??''}
+function list(id,values,concerns=false){const root=$(id);root.replaceChildren();if(!Array.isArray(values)||!values.length){const li=document.createElement('li');li.textContent='Doğrulanabilen bir bulgu yok.';root.append(li);return}values.forEach(v=>{const li=document.createElement('li');li.textContent=concerns?(typeof v==='object'?`${v.title||'Sorun'} — ${v.detail||''}`:String(v)):String(v);root.append(li)})}
+function render(r,checked){lastReport=r;lastChecked=checked;text('hotel',r.hotel_name||'Otel belirlenemedi');text('location',r.location||'');const states={good:'Uygun',caution:'İncelenmeli',avoid:'Yüksek risk',insufficient:'Yetersiz veri',unknown:'Otel belirlenemedi'};const stat=states[r.status]||states.insufficient;text('status',stat);$('status').className='badge '+(states[r.status]?r.status:'insufficient');text('score',Number.isInteger(r.score)?r.score+'/100':'Puan yok');text('confidence','Güven düzeyi: '+({high:'Yüksek',medium:'Orta',low:'Düşük'}[r.confidence]||'Düşük'));text('checked','Kontrol: '+new Date(checked).toLocaleString('tr-TR'));text('summary',r.summary||'Özet bulunamadı');list('positives',r.positives);list('concerns',r.concerns,true);text('recommendation',r.recommendation||'Otel bilgilerini tedarikçinizle doğrulayın.');text('evidence',r.evidence_note||'Kaynak kapsamı bilgisi bulunamadı.');const links=$('sources');links.replaceChildren();if(Array.isArray(r.sources))r.sources.forEach(s=>{try{const u=new URL(s.url);if(!['https:','http:'].includes(u.protocol))return;const a=document.createElement('a');a.href=u.href;a.target='_blank';a.rel='noopener noreferrer';a.textContent=(s.title||u.hostname)+(s.date?' · '+s.date:'')+' ↗';links.append(a)}catch{}});if(!links.childNodes.length){const p=document.createElement('p');p.textContent='Erişilebilen yorum bağlantısı bulunamadı.';links.append(p)}show('result');$('result').scrollIntoView({behavior:'smooth',block:'start'})}
+$('form').addEventListener('submit',async e=>{e.preventDefault();show('error',false);show('result',false);show('loading');$('analyze').disabled=true;try{const d=await request({action:'analyze',url:$('url').value.trim(),days});render(d.report,d.checked_at)}catch(err){text('error',err.message);show('error');}finally{show('loading',false);$('analyze').disabled=false}});
+
+// PDF, mevcut analizin kısa bir tek sayfalık özetidir. Yeni API sorgusu yapılmaz.
+const pdfCss=`
+  * {box-sizing:border-box} body {font-family:Arial,Helvetica,sans-serif;color:#1b2b42;margin:0;background:white}
+  .sheet{width:720px;padding:31px 37px;background:#fff}
+  .masthead{border-bottom:3px solid #163f6b;padding-bottom:15px;display:flex;justify-content:space-between;align-items:center}
+  .brandname{font-weight:800;font-size:19px;color:#123a66;letter-spacing:.8px}
+  .subtitle{font-size:10px;color:#698096;margin-top:4px}
+  .date{font-size:11px;color:#687c91;text-align:right}
+  .hotel{font-size:24px;line-height:1.2;font-weight:800;margin:21px 0 5px;overflow-wrap:anywhere}
+  .location{font-size:12px;color:#65768b;margin:0 0 16px}
+  .rating{display:flex;align-items:center;gap:16px;padding:16px;background:#f0f5fa;border-radius:10px}
+  .number{font-size:35px;font-weight:800;color:#173f6d;line-height:1}
+  .number small{font-size:15px;color:#63768a}
+  .verdict{font-size:15px;font-weight:750;color:#173f6d}
+  .confidence{font-size:11px;color:#607286;margin-top:5px}
+  .summary{font-size:13px;line-height:1.5;margin:18px 0;color:#33465c}
+  .cols{display:flex;gap:16px;margin-top:13px}
+  .col{width:50%;border:1px solid #dce5ee;border-radius:9px;padding:15px}
+  .sectiontitle{font-weight:800;font-size:13px;margin-bottom:11px}
+  .ok{color:#147150}.bad{color:#9d4c32}
+  ul{padding:0 0 0 16px;margin:0}li{font-size:11.5px;line-height:1.44;margin-bottom:8px;overflow-wrap:anywhere}
+  .recommend{margin-top:16px;border-left:4px solid #1f5b91;background:#f2f7fb;padding:14px 16px;border-radius:3px}
+  .recommend b{font-size:13px;color:#173f6d}.recommend p{font-size:12px;line-height:1.5;margin:7px 0 0}
+  .footnote{font-size:10.5px;line-height:1.35;color:#687a8d;margin-top:15px}
+  .foot{margin-top:19px;border-top:1px solid #dce5ee;padding-top:12px;font-size:10px;color:#8392a2;display:flex;justify-content:space-between}
+`;
+function shorten(val,n){const s=String(val||'').replace(/\s+/g,' ').trim();return s.length>n?s.slice(0,n-1).trimEnd()+'…':s;}
+function makePdfSheet(r){
+ const el=document.createElement('div');el.className='sheet';
+ const add=(parent,tag,cls,value)=>{const node=document.createElement(tag);if(cls)node.className=cls;if(value!==undefined)node.textContent=value;parent.append(node);return node;};
+ const header=add(el,'div','masthead');const brand=add(header,'div');add(brand,'div','brandname','TITCOTOUR');add(brand,'div','subtitle','OTEL KALİTE DEĞERLENDİRME RAPORU');add(header,'div','date',new Date(lastChecked||Date.now()).toLocaleDateString('tr-TR',{year:'numeric',month:'long',day:'numeric'}));
+ add(el,'div','hotel',shorten(r.hotel_name||'Otel belirlenemedi',100));add(el,'div','location',shorten(r.location||'',110));
+ const rating=add(el,'div','rating');const score=add(rating,'div','number',Number.isInteger(r.score)?String(r.score):'—');add(score,'small',null,' / 100');
+ const decision=add(rating,'div');const labels={good:'UYGUN',caution:'İNCELENMELİ',avoid:'YÜKSEK RİSK',insufficient:'YETERSİZ VERİ',unknown:'OTEL BELİRLENEMEDİ'};
+ add(decision,'div','verdict',labels[r.status]||labels.insufficient);add(decision,'div','confidence','Değerlendirme güveni: '+({high:'Yüksek',medium:'Orta',low:'Düşük'}[r.confidence]||'Düşük'));
+ add(el,'p','summary',shorten(r.summary||'Genel değerlendirme bulunamadı.',470));
+ const cols=add(el,'div','cols');
+ const items=[{title:'✓ Güçlü yönler',cls:'ok',items:(Array.isArray(r.positives)?r.positives:[]).slice(0,4).map(x=>shorten(x,125))},{title:'! Dikkat edilmesi gerekenler',cls:'bad',items:(Array.isArray(r.concerns)?r.concerns:[]).slice(0,4).map(x=>shorten(typeof x==='object'?(x.title||'Sorun')+': '+(x.detail||''):x,125))}];
+ for(const x of items){const col=add(cols,'div','col');add(col,'div','sectiontitle '+x.cls,x.title);const ul=add(col,'ul');for(const t of (x.items.length?x.items:['Doğrulanabilen belirgin bir bulgu yok.']))add(ul,'li',null,t);}
+ const rec=add(el,'div','recommend');add(rec,'b',null,'Titcotour önerisi');add(rec,'p',null,shorten(r.recommendation||'Rezervasyon öncesi otelle teyit edin.',360));
+ add(el,'div','footnote','Kaynak notu: '+shorten(r.evidence_note||'Kaynak kapsamı belirtilmedi.',210));
+ const foot=add(el,'div','foot');add(foot,'span',null,'Yapay zekâ destekli ön değerlendirme · Nihai karar personelindir.');add(foot,'span',null,Math.min(12,Array.isArray(r.sources)?r.sources.length:0)+' kaynak bağlantısı incelendi / listelendi');
+ return el;
+}
+function loadPdfLibrary(){
+ if(window.html2pdf)return Promise.resolve();
+ return new Promise((resolve,reject)=>{const script=document.createElement('script');script.src='https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js';script.onload=()=>window.html2pdf?resolve():reject(new Error('PDF kütüphanesi yüklenemedi.'));script.onerror=()=>reject(new Error('PDF kütüphanesi yüklenemedi.'));document.head.append(script);});
+}
+$('downloadPdf').onclick=async()=>{
+ if(!lastReport)return;
+ const btn=$('downloadPdf');btn.disabled=true;btn.textContent='PDF hazırlanıyor...';
+ let wrapper;
+ try{
+   await loadPdfLibrary();
+   wrapper=document.createElement('div');wrapper.style.cssText='position:fixed;left:0;top:0;width:720px;background:white;z-index:2147483647;pointer-events:none';
+   const style=document.createElement('style');style.textContent=pdfCss;wrapper.append(style);
+   const sheet=makePdfSheet(lastReport);wrapper.append(sheet);document.body.append(wrapper);
+   // İçerik çok uzunsa tek A4 sayfasına sığdır.
+   const maxHeight=970;const h=sheet.scrollHeight;if(h>maxHeight){sheet.style.transformOrigin='top left';const scale=maxHeight/h;sheet.style.transform=`scale(${scale})`;wrapper.style.width=(720*scale)+'px';wrapper.style.height=maxHeight+'px';}
+   await new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve)));
+   const safeName=(lastReport.hotel_name||'Otel').replace(/[^\p{L}\p{N} -]/gu,'').trim().slice(0,65).replace(/\s+/g,'-')||'Otel';
+   await window.html2pdf().set({margin:0,filename:`Titcotour-${safeName}-Rapor.pdf`,image:{type:'jpeg',quality:.96},html2canvas:{scale:2,backgroundColor:'#ffffff',useCORS:true,scrollX:0,scrollY:0,windowWidth:Math.max(850,document.documentElement.clientWidth)},jsPDF:{unit:'pt',format:'a4',orientation:'portrait'},pagebreak:{mode:[]}}).from(sheet).save();
+ }catch(error){alert('PDF indirilemedi: '+error.message+'\nAlternatif olarak “Tam raporu yazdır” düğmesini kullanıp PDF olarak kaydedebilirsiniz.');}
+ finally{wrapper?.remove();btn.disabled=false;btn.textContent='↓ İnceleme Raporunu İndir (PDF)';}
+};
+
+$('print').onclick=()=>window.print();$('copy').onclick=async()=>{if(!lastReport)return;const r=lastReport;const s=[r.hotel_name,r.location,r.status,r.summary,'Öneri: '+r.recommendation,'Sorunlar:',...(r.concerns||[]).map(x=>'- '+x.title+': '+x.detail),'Kaynaklar:',...(r.sources||[]).map(x=>x.url)].join('\n');try{await navigator.clipboard.writeText(s);$('copy').textContent='Kopyalandı!';setTimeout(()=>$('copy').textContent='Özeti kopyala',1500)}catch{alert('Otomatik kopyalanamadı.')}};
+</script>
+</body></html>
